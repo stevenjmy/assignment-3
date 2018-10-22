@@ -62,6 +62,41 @@
    <p>The location I selected is between Bankstown and Campsie, because there are two airports near the location, so it has a good transportation condition for the people live here, and most importantly, it is convenience for people living far from Sydney coming to this place to work and study. Moreover, the main rock type around this area is sedimentary rock, like sandstone and shale, so it should be strong enough to hold large buildings. The graph on the left shows the airport location, while the right one shows the rock types.</p>
      <h6><img src="location.jpg" width="475" height="280" alt="image missing!" >
         <img src="soil.JPG" width="475" height="280" alt="image missing!" ></h6>
+     
+      <div class="container">
+  <div class="content">
+     map.on('load', function() {
+
+    map.addLayer({
+        "id": "data",
+        "type": "fill-extrusion",
+        "source": {
+            'type': 'geojson',
+            'data': './text.geojson'
+        },
+        'layout': {
+            'visibility': 'visible'
+            },
+        'paint': {
+                'fill-extrusion-color' : {
+                    'property': 'colour',
+                    'type': 'identity'
+                },
+                'fill-extrusion-height' : {
+                    'type': 'identity',
+                    'property': 'height'
+                },
+                'fill-extrusion-base' : {
+                    'type': 'identity',
+                    'property': 'base_height'
+                },
+                 'fill-extrusion-opacity': 1
+            }
+
+    });
+});
+  </div>
+   </div>
      <br>
      <h1>Proposal Details:</h1>
      <br>
