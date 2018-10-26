@@ -25,6 +25,12 @@ h1 {
 	float: left;
 	front-size: 20px;
 }
+h7 {  
+	margin:auto;
+	text-align: center;
+	float: center;
+	front-size: 15px;
+}
 
 h2{
 color: white;
